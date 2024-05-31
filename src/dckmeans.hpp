@@ -75,7 +75,7 @@ string init_type, Tint seed){
 
         // Check Convergence
         if (alg_utils.check_convergence(new_centroids, centroids, threshold, diff, temp_diff, i, j)){
-                cout << "Convergence at iteration: " << loop_counter << "\n";
+                // cout << "Convergence at iteration: " << loop_counter << "\n";
                 break;
         }
         
