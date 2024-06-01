@@ -120,6 +120,6 @@ Ablation experiments | results_ablation | (with vectorization) ablation_with_vec
 
 ### Contact Details
 
-For help with compiling/running, or reporting issues-please let us know at parishar[at]iu[dot]edu. We would be happy to help you out.
+For help with compiling/running, or reporting issues-please let us know at __parishar__[at]__iu__[dot]__edu__. We would be happy to help you out.
 
 
