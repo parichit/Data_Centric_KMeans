@@ -27,7 +27,7 @@ Note: We have already copied the Eigen header files (required for compiling) int
 cd src
 ```
 
--  Link with the eigen header files by using the -I CPP compiler flag
+-  Link with the eigen header files by using the -I CPP compiler flag. If g++ is not installed in the system, it can be replaced with other c++ compilers available on the system. The following command will throw a warning upon execution, please ignore the warning.
 
 ```
 g++ -std=c++11 -I ../eigen/ -O3 driver.cpp -o driver.out 

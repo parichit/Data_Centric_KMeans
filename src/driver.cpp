@@ -24,13 +24,10 @@ string basePath = "../Data/";
 
 int main(){
 
-    std::vector<vector <float> > dataset;
-    vector<int> labels;
     string someFilepath = "";
 
     // CSV Files containing the data
-    vector<string> file_list = {"Breastcancer.csv", "CreditRisk.csv",
-            "census.csv", "crop.csv", "birch.csv"};
+    vector<string> file_list = {"crop.csv", "birch.csv"};
     
     
     // Declare variables
@@ -38,15 +35,14 @@ int main(){
     int num_iterations = 100;
 
     // Convergence threshold
-    float threshold = 0.001;
+    float threshold = 0.0001;
 
     // Change the following for number of clusters (k) 
-    int num_clusters = 20;
+    int num_clusters = 10;
 
     // Random seed for reproducing the results
     int seed = 5;
 
-    output_data res;
      
     // Run the algorithms
     // The algorithms are called in the following sequence: Kmeans --> Kmeans-d --> and Ball Kmeans
@@ -55,10 +51,13 @@ int main(){
     
     for (int i =0; i<file_list.size(); i++){ 
         
+        std::vector<vector <float> > dataset;
+        vector<int> labels;
+        output_data res;
+        
+        someFilepath = basePath + file_list[i];
 
-        someFilepath = someFilepath + file_list[i];
-
-        cout << "Reading the input from: " << someFilepath << endl;
+        cout << "\nReading the input from: " << someFilepath << endl;
 
         // Read in the data
         auto t1 = std::chrono::high_resolution_clock::now();
@@ -75,8 +74,6 @@ int main(){
     
         int numRows = p.first;
         int numCols = p.second;
-
-
 
         // Following lines will call the kmeans implementation
         cout << "\nAlgo: KMeans," << " Clusters: " << num_clusters << ", Threshold: " << threshold << endl;
@@ -116,8 +113,8 @@ int main(){
         std::cout << "Total Ball Kmeans time: " << ms_int3.count() << " milliseconds\n";
 
 
-        cout << "\n#################################"
-        cout << "\n#################################"
+        cout << "\n#################################";
+        cout << "\n#################################";
 
     }
 

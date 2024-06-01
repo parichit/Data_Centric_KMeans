@@ -210,7 +210,7 @@ vector<vector<vector <Tfloat> > > &affine_vectors,
 vector<vector<vector <Tfloat> > > &mid_points, 
 unsigned long long int &he_counter, vector<Tint> &temp, Tint &my_cluster, 
 Tint &i, Tint &j, Tfloat &temp_result){
-    
+
 
     algorithm_utils alg_utils;
 
