@@ -19,7 +19,7 @@ using namespace std;
 
 // Path to the folder containing the data. In this case, the CSV files for each dataset are present 
 // inside the Data folder.
-string basePath = "../Data/";
+string basePath = "../Sample_Data/";
 
 
 int main(){
@@ -27,8 +27,8 @@ int main(){
     string someFilepath = "";
 
     // CSV Files containing the data
-    vector<string> file_list = {"crop.csv", "birch.csv"};
-    
+    vector<string> file_list = {"Breastcancer.csv", "CreditRisk.csv", "census.csv",
+    "birch.csv"};    
     
     // Declare variables
     // Max iterations (chnage this to increase or decrease the iterations)
@@ -38,10 +38,10 @@ int main(){
     float threshold = 0.0001;
 
     // Change the following for number of clusters (k) 
-    int num_clusters = 10;
+    int num_clusters = 12;
 
     // Random seed for reproducing the results
-    int seed = 5;
+    int seed = 17;
 
      
     // Run the algorithms
