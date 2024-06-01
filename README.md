@@ -108,18 +108,18 @@ Total Ball Kmeans time: 12115 milliseconds
 
 Raw benchmark data is available under respective folders, as follows:
 
-| Experiment Type | Folder Name | File Name |
+| Experiment Type | Folder Name | File Name 
+|_________________|_____________|__________
+| (Random seeding) Benchmarks on real data | results_benchmark_real_data | benchmark_real_avg_runs.csv 
 
-| (Random seeding) Benchmarks on real data | results_benchmark_real_data | benchmark_real_avg_runs.csv |
+| (k++ seeding) benchmarks on real data | results_benchmark_real_data | benchmark_real_kplus_avg_runs.csv
 
-| (k++ seeding) benchmarks on real data | results_benchmark_real_data | benchmark_real_kplus_avg_runs.csv|
+| (synthetic data) Clustering experiments | results_synthetic_data | benchmark_clus_avg_runs.csv 
+| (synthetic data) Dimensionality experiments | results_synthetic_data | benchmark_dims_avg_runs.csv
+| (synthetic data) Scalability experiments | results_synthetic_data | benchmark_scal_avg_runs.csv
 
-| (synthetic data) Clustering experiments | results_synthetic_data | benchmark_clus_avg_runs.csv |
-| (synthetic data) Dimensionality experiments | results_synthetic_data | benchmark_dims_avg_runs.csv |
-| (synthetic data) Scalability experiments | results_synthetic_data | benchmark_scal_avg_runs.csv |
-
-| Doubling experiments | results_doubling_exp | doubling_clusters_avg.csv, doubling_proportion_avg.csv |
-| Ablation experiments | results_ablation | (with vectorization) ablation_with_vec_avg.csv, (without vectorization) ablation_with_vec_avg.csv |
+| Doubling experiments | results_doubling_exp | doubling_clusters_avg.csv, doubling_proportion_avg.csv
+| Ablation experiments | results_ablation | (with vectorization) ablation_with_vec_avg.csv, (without vectorization) ablation_with_vec_avg.csv
 
 
 
