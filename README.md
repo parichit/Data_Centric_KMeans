@@ -118,5 +118,8 @@ Experiment Type | Folder Name | File Name
 Doubling experiments | results_doubling_exp | doubling_clusters_avg.csv, doubling_proportion_avg.csv
 Ablation experiments | results_ablation | (with vectorization) ablation_with_vec_avg.csv, (without vectorization) ablation_with_vec_avg.csv
 
+### Contact Details
+
+For help with compiling/running, or reporting issues-please let us know at parishar@iu.edu. We would be happy to help you out.
 
 
