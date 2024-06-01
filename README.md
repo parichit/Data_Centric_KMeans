@@ -30,7 +30,7 @@ cd src
 - Link with the eigen header files by using the -I CPP compiler flag. If g++ is not installed in the system, it can be replaced with other c++ compilers available on the system. The following command will throw a warning upon execution, please ignore the warning.
 
 ```
-g++ -std=c++11 -I ../eigen/ -O3 driver.cpp -o driver.out 
+g++ -std=c++11 -I ../eigen/ driver.cpp -o driver.out 
 ```
 
 - Execute the newly compiled binary as follows:
@@ -104,22 +104,19 @@ Total Ball Kmeans time: 12115 milliseconds
 #################################%
 ```
 
-### Benchmark Results
+### Raw Benchmark Results
 
-Raw benchmark data is available under respective folders, as follows:
+Raw benchmark data is available as follows:
 
-| Experiment Type | Folder Name | File Name 
-|_________________|_____________|__________
-| (Random seeding) Benchmarks on real data | results_benchmark_real_data | benchmark_real_avg_runs.csv 
-
-| (k++ seeding) benchmarks on real data | results_benchmark_real_data | benchmark_real_kplus_avg_runs.csv
-
-| (synthetic data) Clustering experiments | results_synthetic_data | benchmark_clus_avg_runs.csv 
-| (synthetic data) Dimensionality experiments | results_synthetic_data | benchmark_dims_avg_runs.csv
-| (synthetic data) Scalability experiments | results_synthetic_data | benchmark_scal_avg_runs.csv
-
-| Doubling experiments | results_doubling_exp | doubling_clusters_avg.csv, doubling_proportion_avg.csv
-| Ablation experiments | results_ablation | (with vectorization) ablation_with_vec_avg.csv, (without vectorization) ablation_with_vec_avg.csv
+Experiment Type | Folder Name | File Name
+--- | --- | ---
+(Random seeding) Benchmarks on real data | results_benchmark_real_data | benchmark_real_avg_runs.csv
+(k++ seeding) Benchmarks on real data | results_benchmark_real_data | benchmark_real_kplus_avg_runs.csv
+(synthetic data) Clustering experiments | results_synthetic_data | benchmark_clus_avg_runs.csv 
+(synthetic data) Dimensionality experiments | results_synthetic_data | benchmark_dims_avg_runs.csv
+(synthetic data) Scalability experiments | results_synthetic_data | benchmark_scal_avg_runs.csv
+Doubling experiments | results_doubling_exp | doubling_clusters_avg.csv, doubling_proportion_avg.csv
+Ablation experiments | results_ablation | (with vectorization) ablation_with_vec_avg.csv, (without vectorization) ablation_with_vec_avg.csv
 
 
 
