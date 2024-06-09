@@ -1,4 +1,4 @@
-### KMeans Data Centric (Kmeans-d)
+# What Data-Centric AI Can Do For k-means: a Faster, Robust kmeans-d
 
 Data-centric AI (DCAI) is an emerging paradigm that prioritizes the quality, diversity, and repre-
 sentation of data over model architecture and hyperparameter tuning. DCAI emphasizes up-stream data operations such as cleaning, balancing, and preprocessing, rather than solely focusing
