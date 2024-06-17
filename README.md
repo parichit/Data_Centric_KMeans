@@ -2,14 +2,10 @@
 
 Data-centric AI (DCAI) is an emerging paradigm that prioritizes the quality, diversity, and repre-
 sentation of data over model architecture and hyperparameter tuning. DCAI emphasizes up-stream data operations such as cleaning, balancing, and preprocessing, rather than solely focusing
-on downstream model selection and optimization. This work aims to push DCAI into the model building phase itself, observing whether benefits downstream can be as significant in a classical, well studied algorithm like k-means. We introduce data-centric k-means (or kmeans-d for
-short). kmeans-d is a novel adaptation of k-means clustering that achieves significant speedups while preserving algorithmic accuracy. The key innovation classifies data points as high expressive
-(HE), impacting the objective function significantly, or low expressive (LE), with minimal in-
-fluence. By categorizing data points as HE/LE, kmeans-d extracts quality signals from data to
-improve scalability and reduce computational overhead. Comprehensive experimental evalua-
-tion demonstrate substantial performance gains of kmeans-d over existing alternatives. The novelty
-lies in the pioneering integration of data-centric principles within a fundamental algorithm’s it-
-erative core. By rethinking k-means through a data lens, kmeans-d delivers superior efficiency
+on downstream model selection and optimization. This work aims to push DCAI into the model building phase itself, observing whether benefits downstream can be as significant in a classical, well studied algorithm like k-means. We introduce data-centric k-means (or kmeans-d for short). kmeans-d is a novel adaptation of k-means clustering that achieves significant speedups while preserving algorithmic accuracy. The key innovation classifies data points as high expressive
+(HE), impacting the objective function significantly, or low expressive (LE), with minimal influence. By categorizing data points as HE/LE, kmeans-d extracts quality signals from data to
+improve scalability and reduce computational overhead. Comprehensive experimental evaluation demonstrate substantial performance gains of kmeans-d over existing alternatives. The novelty
+lies in the pioneering integration of data-centric principles within a fundamental algorithm’s iterative core. By rethinking k-means through a data lens, kmeans-d delivers superior efficiency
 without sacrificing properties like accuracy and convergence, paving the way for infusing data-centricity into other canonical algorithms.
 
 
