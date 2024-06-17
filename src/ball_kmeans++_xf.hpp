@@ -1,3 +1,7 @@
+// The following code is adapted from the BallKmeans draft: https://arxiv.org/abs/2005.00784
+// The initial source code is available at: https://github.com/syxiaa/ball-k-means
+
+
 #include <iostream>
 #include <fstream>
 #include <time.h>
