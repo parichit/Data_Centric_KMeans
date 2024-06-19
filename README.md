@@ -1,28 +1,23 @@
-# What Data-Centric AI Can Do For k-means: a Faster, Robust kmeans-d
+## What Data-Centric AI Can Do For k-means: a Faster, Robust kmeans-d
+*k*means-d pushes __DCAI into the model building phase__ itself, observing whether benefits downstream can be as significant in a classical, well studied algorithm like *k*-means. *k*means-d achieves significant speedups (10X-300X) while preserving algorithmic accuracy. The key innovation classifies data points as __high expressive
+(HE), impacting the objective function significantly, or low expressive (LE), with minimal influence__. By categorizing data points as HE/LE, kmeans-d extracts quality signals from data to improve scalability and reduce computational overhead. By rethinking k-means through a data lens, kmeans-d delivers superior efficiency without sacrificing properties like accuracy and convergence, paving the way for infusing data-centricity into other canonical algorithms.
 
-Data-centric AI (DCAI) is an emerging paradigm that prioritizes the quality, diversity, and repre-
-sentation of data over model architecture and hyperparameter tuning. DCAI emphasizes up-stream data operations such as cleaning, balancing, and preprocessing, rather than solely focusing
-on downstream model selection and optimization. This work aims to push DCAI into the model building phase itself, observing whether benefits downstream can be as significant in a classical, well studied algorithm like k-means. We introduce data-centric k-means (or kmeans-d for short). kmeans-d is a novel adaptation of k-means clustering that achieves significant speedups while preserving algorithmic accuracy. The key innovation classifies data points as high expressive
-(HE), impacting the objective function significantly, or low expressive (LE), with minimal influence. By categorizing data points as HE/LE, kmeans-d extracts quality signals from data to
-improve scalability and reduce computational overhead. Comprehensive experimental evaluation demonstrate substantial performance gains of kmeans-d over existing alternatives. The novelty
-lies in the pioneering integration of data-centric principles within a fundamental algorithm’s iterative core. By rethinking k-means through a data lens, kmeans-d delivers superior efficiency
-without sacrificing properties like accuracy and convergence, paving the way for infusing data-centricity into other canonical algorithms.
 
-### Dynamic Relocation of Compute to High Expressive Data
+### Data-Centric and Automated Relocation of Computation To Extract Quality Signals
 
-<!-- ![image](images/picture3.png) -->
+The central idea is illustrated in Fig. 1. Instead of doing the traditional data agnostic iteration, __data is treated as a first class citizen to proactively channelize significant computations towards HE data__ (as opposed to LE). Our paper provide detailed proof to show that LE does not affect the convergence or quality of results.    
+
 
 <div align="center">
-  <img src="images/picture3.png" alt="Image description" width="250">
+  <img src="images/picture3.png" alt="Image description" width="300">
   </br>
 </div>
-Three clusters are denoted with their centers- mu1 (green), meu2 (skyblue) and $\mu_3$ (purple). __M1__ and __M_2__ are the midpoints of line segments $\overline{\mu_1\mu_2}$ and $\overline{\mu_2\mu_3}$. For clusters $\mu_1$ and $\mu_2$, only $C, D$ are valid HE points because they are oriented in the same direction as $\protect \overrightarrow{\rm M_1\mu_1}$. For clusters $\mu_2$ and $\mu_3$, $P, Q$ are HE as they are oriented in same direction as $\protect \overrightarrow{\rm M_2\mu_3}$
 
-
+__Figure 1:__ Three clusters are denoted with their centers-$mu_1$ (green), $meu_2$ (skyblue) and $mu_3$ (purple). $M_1$ and $M_2$ are the midpoints of line segments $\overline{\mu_1\mu_2}$ and $\overline{\mu_2\mu_3}$. For clusters $\mu_1$ and $\mu_2$, only $C, D$ are valid HE points because they are oriented in the same direction as $\overrightarrow{\rm M_1\mu_1}$. For clusters $\mu_2$ and $\mu_3$, $P, Q$ are HE as they are oriented in same direction as $\overrightarrow{\rm M_2\mu_3}$
 
 ### Dependency
 
-The code base is purely developed in C++. Both Kmeans and Kmeans-d can be compiled direclty via standard C++ compiler (g++, clang etc.). However, Ball_Kmeans depends on the Eigen linear algebra library and requires linking to compile successfully. Following code snippets show exmaples of compiling the binary.
+The code base is purely developed in C++. Both Kmeans and *k*means-d can be compiled direclty via standard C++ compiler (g++, clang etc.). However, Ball_Kmeans depends on the Eigen linear algebra library and requires linking to compile successfully. Following code snippets show exmaples of compiling the binary.
 
 Note: We have already copied the Eigen header files (required for compiling) into the Github repository.
 
@@ -115,15 +110,19 @@ Total Ball Kmeans time: 12115 milliseconds
 
 Raw benchmark data is available as follows:
 
-Experiment Type | Folder Name | File Name
+Experiment Type | Name | File Name
 --- | --- | ---
-(Random seeding) Benchmarks on real data | results_benchmark_real_data | benchmark_real_avg_runs.csv
-(k++ seeding) Benchmarks on real data | results_benchmark_real_data | benchmark_real_kplus_avg_runs.csv
-(synthetic data) Clustering experiments | results_synthetic_data | benchmark_clus_avg_runs.csv 
-(synthetic data) Dimensionality experiments | results_synthetic_data | benchmark_dims_avg_runs.csv
-(synthetic data) Scalability experiments | results_synthetic_data | benchmark_scal_avg_runs.csv
-Doubling experiments | results_doubling_exp | doubling_clusters_avg.csv, doubling_proportion_avg.csv
-Ablation experiments | results_ablation | (with vectorization) ablation_with_vec_avg.csv, (without vectorization) ablation_with_vec_avg.csv
+Benchmarks on real data | __Random Seeding__ | [Results with random seeding](results_benchmark_real_data/benchmark_real_avg_runs.csv)
+Benchmarks on real data | $\textbf{k++}$ __Seeding__ | [Results with $k++$ seeding](results_benchmark_real_data/benchmark_real_avg_runs.csv)
+Large number of Clusters | __Clustering Experiments__ | [Clustering experiments](results_synthetic_data/benchmark_clus_avg_runs.csv) 
+Large dimensions | __Dimensionality Experiments__| [Dimensionality experiments](results_synthetic_data/benchmark_dims_avg_runs.csv)
+Big synthetic data | __Scalability Experiments__ | [Scalability experiments](results_synthetic_data/benchmark_scal_avg_runs.csv)
+Doubling experiments | __Savings in Computation__ | [Doubling Clusters](results_doubling_exp/doubling_clusters_avg.csv), [Doubling Data Proportion](results_doubling_exp/doubling_clusters_avg.csv)
+Ablation experiments | __Isolating Effect of Parallelism__ | [With vectorization](results_doubling_exp/ablation_with_vec_avg.csv), [No vectorization](results_doubling_exp/ablation_with_vec_avg.csv)
+
+#### Related Work
+
+Check out [Paper 1](https://www.sciencedirect.com/science/article/pii/S2352711021001771) | [Paper 2](https://datacentricai.org/neurips21/papers/145_CameraReady_Poster_DCAI_DataExpressiveness_2021.pdf) | [R Package](https://cran.r-project.org/web/packages/DCEM/vignettes/DCEM.html) | to learn more about previous work.
 
 ### Contact Details
 
