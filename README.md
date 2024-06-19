@@ -112,13 +112,13 @@ Raw benchmark data is available as follows:
 
 Experiment Type | Name | File Name
 --- | --- | ---
-Benchmarks on real data | __Random Seeding__ | [Results with random seeding](./results_benchmark_real_data/)
-Benchmarks on real data | $\textbf{k++}$ __Seeding__ | [Results with $k++$ seeding](./Data_Centric_KMeans/blob/main/results_benchmark_real_data/benchmark_real_avg_runs.csv)
-Large number of Clusters | __Clustering Experiments__ | [Clustering experiments](results_synthetic_data/benchmark_clus_avg_runs.csv) 
-Large dimensions | __Dimensionality Experiments__| [Dimensionality experiments](results_synthetic_data/benchmark_dims_avg_runs.csv)
-Big synthetic data | __Scalability Experiments__ | [Scalability experiments](results_synthetic_data/benchmark_scal_avg_runs.csv)
-Doubling experiments | __Savings in Computation__ | [Doubling Clusters](results_doubling_exp/doubling_clusters_avg.csv), [Doubling Data Proportion](results_doubling_exp/doubling_clusters_avg.csv)
-Ablation experiments | __Isolating Effect of Parallelism__ | [With vectorization](results_doubling_exp/ablation_with_vec_avg.csv), [No vectorization](results_doubling_exp/ablation_with_vec_avg.csv)
+Benchmarks on real data | __Random Seeding__ | benchmark_real_avg_runs.csv
+Benchmarks on real data | $\textbf{k++}$ __Seeding__ | benchmark_real_kplus_avg_runs.csv
+Large number of Clusters | __Clustering Experiments__ | benchmark_clus_avg_runs.csv 
+Large dimensions | __Dimensionality Experiments__| benchmark_dims_avg_runs.csv
+Big synthetic data | __Scalability Experiments__ | benchmark_scal_avg_runs.csv
+Doubling experiments | __Savings in Computation__ | doubling_clusters_avg.csv, doubling_clusters_avg.csv
+Ablation experiments | __Isolating Effect of Parallelism__ | ablation_with_vec_avg.csv, ablation_with_vec_avg.csv
 
 #### Related Work
 
