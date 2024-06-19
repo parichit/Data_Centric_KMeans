@@ -8,6 +8,17 @@ improve scalability and reduce computational overhead. Comprehensive experimenta
 lies in the pioneering integration of data-centric principles within a fundamental algorithm’s iterative core. By rethinking k-means through a data lens, kmeans-d delivers superior efficiency
 without sacrificing properties like accuracy and convergence, paving the way for infusing data-centricity into other canonical algorithms.
 
+### Dynamic Relocation of Compute to High Expressive Data
+
+<!-- ![image](images/picture3.png) -->
+
+<div align="center">
+  <img src="images/picture3.png" alt="Image description" width="250">
+  </br>
+</div>
+Three clusters are denoted with their centers- mu1 (green), meu2 (skyblue) and $\mu_3$ (purple). __M1__ and __M_2__ are the midpoints of line segments $\overline{\mu_1\mu_2}$ and $\overline{\mu_2\mu_3}$. For clusters $\mu_1$ and $\mu_2$, only $C, D$ are valid HE points because they are oriented in the same direction as $\protect \overrightarrow{\rm M_1\mu_1}$. For clusters $\mu_2$ and $\mu_3$, $P, Q$ are HE as they are oriented in same direction as $\protect \overrightarrow{\rm M_2\mu_3}$
+
+
 
 ### Dependency
 
