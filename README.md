@@ -5,7 +5,7 @@
 
 ### Data-Centric and Automated Relocation of Computation To Extract Quality Signals
 
-The central idea is illustrated in Fig. 1. Instead of doing the traditional data agnostic iteration, __data is treated as a first class citizen to proactively channelize significant computations towards HE data__ (as opposed to LE). Our paper provide detailed proof to show that LE does not affect the convergence or quality of results.    
+The concept is illustrated in Fig. 1. Instead of doing the traditional data agnostic iteration, __data is treated as a first class citizen to proactively channelize significant computations towards HE data__ (as opposed to LE). Our paper show that LE does not affect the convergence or quality of results. Our experiments revealed that, real world data contains susbtantial amount of *HE* points, resulting in significant saving of compute, training resources (memory) and time.   
 
 
 <div align="center">
@@ -13,7 +13,7 @@ The central idea is illustrated in Fig. 1. Instead of doing the traditional data
   </br>
 </div>
 
-__Figure 1:__ Three clusters are denoted with their centers-$mu_1$ (green), $meu_2$ (skyblue) and $mu_3$ (purple). $M_1$ and $M_2$ are the midpoints of line segments $\overline{\mu_1\mu_2}$ and $\overline{\mu_2\mu_3}$. For clusters $\mu_1$ and $\mu_2$, only $C, D$ are valid HE points because they are oriented in the same direction as $\overrightarrow{\rm M_1\mu_1}$. For clusters $\mu_2$ and $\mu_3$, $P, Q$ are HE as they are oriented in same direction as $\overrightarrow{\rm M_2\mu_3}$
+__Figure 1:__ Three clusters are denoted with their centers-$\mu_1$ (green), $\mu_2$ (skyblue) and $mu_3$ (purple). $M_1$ and $M_2$ are the midpoints of line segments $\overline{\mu_1\mu_2}$ and $\overline{\mu_2\mu_3}$. For clusters $\mu_1$ and $\mu_2$, only $C, D$ are valid HE points because they are oriented in the same direction as $\overrightarrow{\rm M_1\mu_1}$. For clusters $\mu_2$ and $\mu_3$, $P, Q$ are HE as they are oriented in same direction as $\overrightarrow{\rm M_2\mu_3}$
 
 ### Dependency
 
