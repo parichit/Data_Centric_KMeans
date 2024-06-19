@@ -112,8 +112,8 @@ Raw benchmark data is available as follows:
 
 Experiment Type | Name | File Name
 --- | --- | ---
-Benchmarks on real data | __Random Seeding__ | [Results with random seeding](./results_benchmark_real_data/benchmark_real_avg_runs.csv)
-Benchmarks on real data | $\textbf{k++}$ __Seeding__ | [Results with $k++$ seeding](results_benchmark_real_data/benchmark_real_avg_runs.csv)
+Benchmarks on real data | __Random Seeding__ | [Results with random seeding](./Data_Centric_KMeans/blob/main/results_benchmark_real_data/benchmark_real_avg_runs.csv)
+Benchmarks on real data | $\textbf{k++}$ __Seeding__ | [Results with $k++$ seeding](./Data_Centric_KMeans/blob/main/results_benchmark_real_data/benchmark_real_avg_runs.csv)
 Large number of Clusters | __Clustering Experiments__ | [Clustering experiments](results_synthetic_data/benchmark_clus_avg_runs.csv) 
 Large dimensions | __Dimensionality Experiments__| [Dimensionality experiments](results_synthetic_data/benchmark_dims_avg_runs.csv)
 Big synthetic data | __Scalability Experiments__ | [Scalability experiments](results_synthetic_data/benchmark_scal_avg_runs.csv)
