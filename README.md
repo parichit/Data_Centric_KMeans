@@ -1,6 +1,6 @@
 ## What Data-Centric AI Can Do For k-means: a Faster, Robust kmeans-d
 *k*means-d pushes __DCAI into the model building phase__ itself, observing whether benefits downstream can be as significant in a classical, well studied algorithm like *k*-means. *k*means-d achieves significant speedups (10X-300X) while preserving algorithmic accuracy. The key innovation classifies data points as __high expressive
-(HE), impacting the objective function significantly, or low expressive (LE), with minimal influence__. By categorizing data points as HE/LE, kmeans-d extracts quality signals from data to improve scalability and reduce computational overhead. By rethinking k-means through a data lens, kmeans-d delivers superior efficiency without sacrificing properties like accuracy and convergence, paving the way for infusing data-centricity into other canonical algorithms.
+(*HE*), impacting the objective function significantly, or low expressive (*LE*), with minimal influence__. By categorizing data points as *HE/LE*, kmeans-d extracts quality signals from data to improve scalability and reduce computational overhead. By rethinking k-means through a data lens, kmeans-d delivers superior efficiency without sacrificing properties like accuracy and convergence, paving the way for infusing data-centricity into other canonical algorithms.
 
 
 ### Data-Centric and Automated Relocation of Computation To Extract Quality Signals
@@ -13,7 +13,7 @@ The concept is illustrated in Fig. 1. Instead of doing the traditional data agno
   </br>
 </div>
 
-__Figure 1:__ Three clusters are denoted with their centers-$\mu_1$ (green), $\mu_2$ (skyblue) and $mu_3$ (purple). $M_1$ and $M_2$ are the midpoints of line segments $\overline{\mu_1\mu_2}$ and $\overline{\mu_2\mu_3}$. For clusters $\mu_1$ and $\mu_2$, only $C, D$ are valid HE points because they are oriented in the same direction as $\overrightarrow{\rm M_1\mu_1}$. For clusters $\mu_2$ and $\mu_3$, $P, Q$ are HE as they are oriented in same direction as $\overrightarrow{\rm M_2\mu_3}$
+__Figure 1:__ Three clusters are denoted with their centers- $\mu_1$ (green), $\mu_2$ (skyblue) and $mu_3$ (purple). $M_1$ and $M_2$ are the midpoints of line segments $\overline{\mu_1\mu_2}$ and $\overline{\mu_2\mu_3}$. For clusters $\mu_1$ and $\mu_2$, only $C, D$ are valid *HE* points because they are oriented in the same direction as $\overrightarrow{\rm M_1\mu_1}$. For clusters $\mu_2$ and $\mu_3$, $P, Q$ are *HE* as they are oriented in same direction as $\overrightarrow{\rm M_2\mu_3}$
 
 ### Dependency
 
