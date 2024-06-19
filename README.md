@@ -122,7 +122,7 @@ Ablation experiments | __Isolating Effect of Parallelism__ | ablation_with_vec_a
 
 #### Related Work
 
-Check out [Paper 1](https://www.sciencedirect.com/science/article/pii/S2352711021001771) | [Paper 2](https://datacentricai.org/neurips21/papers/145_CameraReady_Poster_DCAI_DataExpressiveness_2021.pdf) | [R Package](https://cran.r-project.org/web/packages/DCEM/vignettes/DCEM.html) | to learn more about previous work.
+Check out [Paper](https://datacentricai.org/neurips21/papers/145_CameraReady_Poster_DCAI_DataExpressiveness_2021.pdf) | [Paper](https://www.sciencedirect.com/science/article/pii/S2352711021001771) | [R Package](https://cran.r-project.org/web/packages/DCEM/vignettes/DCEM.html) | to learn more about previous work.
 
 ### Contact Details
 
